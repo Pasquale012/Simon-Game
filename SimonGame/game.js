@@ -6,14 +6,18 @@ var started = false;
 
 
 $(document).keypress(function (event) {
-    if (event.which == 65) {
+    
         if (!started) {
             $("#level-title").text("Level " + level);
             nextSequence();
             started = true;
         }
-    }
+   
 });
+
+$(document).on("taphold",function(){
+    alert("Touch ok!");
+  });
 
 
 $(".btn").click(function () {
